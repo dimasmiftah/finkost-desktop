@@ -414,7 +414,7 @@ public class MainView extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Lato", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Perencanaan anggaran");
+        jLabel5.setText("Perencanaan Anggaran");
 
         jPanel3.setBackground(new java.awt.Color(251, 181, 168));
 
@@ -503,7 +503,7 @@ public class MainView extends javax.swing.JFrame {
         btnTambahRe.setBackground(new java.awt.Color(251, 181, 168));
         btnTambahRe.setFont(new java.awt.Font("Lato", 1, 12)); // NOI18N
         btnTambahRe.setForeground(new java.awt.Color(38, 50, 56));
-        btnTambahRe.setText("Tambah Rencana/Tagihan");
+        btnTambahRe.setText("Tambah Tagihan");
         btnTambahRe.setBorder(null);
         btnTambahRe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -584,7 +584,7 @@ public class MainView extends javax.swing.JFrame {
         addCategoryBtn.setBackground(new java.awt.Color(251, 181, 168));
         addCategoryBtn.setFont(new java.awt.Font("Lato", 1, 11)); // NOI18N
         addCategoryBtn.setForeground(new java.awt.Color(38, 50, 56));
-        addCategoryBtn.setText("Tambah kategori");
+        addCategoryBtn.setText("Tambah Kategori");
         addCategoryBtn.setBorder(null);
         addCategoryBtn.setBorderPainted(false);
         addCategoryBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -596,7 +596,7 @@ public class MainView extends javax.swing.JFrame {
         profileBtn.setBackground(new java.awt.Color(251, 181, 168));
         profileBtn.setFont(new java.awt.Font("Lato", 1, 11)); // NOI18N
         profileBtn.setForeground(new java.awt.Color(38, 50, 56));
-        profileBtn.setText("Ubah profil");
+        profileBtn.setText("Ubah Profil");
         profileBtn.setBorder(null);
         profileBtn.setBorderPainted(false);
         profileBtn.addActionListener(new java.awt.event.ActionListener() {

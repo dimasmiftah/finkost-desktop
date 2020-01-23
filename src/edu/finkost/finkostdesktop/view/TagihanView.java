@@ -9,12 +9,12 @@ package edu.finkost.finkostdesktop.view;
  *
  * @author dimas
  */
-public class AnggaranView extends javax.swing.JFrame {
+public class TagihanView extends javax.swing.JFrame {
 
     /**
      * Creates new form AnggaranView
      */
-    public AnggaranView() {
+    public TagihanView() {
         initComponents();
     }
 
@@ -49,7 +49,7 @@ public class AnggaranView extends javax.swing.JFrame {
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Tambah Anggaran/Tagihan");
+        jLabel1.setText("Tambah Tagihan");
 
         jLabel2.setFont(new java.awt.Font("Lato", 0, 40)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(235, 87, 87));
@@ -209,20 +209,21 @@ public class AnggaranView extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AnggaranView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TagihanView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AnggaranView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TagihanView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AnggaranView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TagihanView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AnggaranView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TagihanView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AnggaranView().setVisible(true);
+                new TagihanView().setVisible(true);
             }
         });
     }
