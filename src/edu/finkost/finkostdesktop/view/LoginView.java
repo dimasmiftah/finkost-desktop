@@ -294,7 +294,7 @@ public class LoginView extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(main, javax.swing.GroupLayout.DEFAULT_SIZE, 603, Short.MAX_VALUE)
+            .addComponent(main, javax.swing.GroupLayout.PREFERRED_SIZE, 603, Short.MAX_VALUE)
         );
 
         pack();
