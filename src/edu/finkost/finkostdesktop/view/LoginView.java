@@ -5,6 +5,9 @@
  */
 package edu.finkost.finkostdesktop.view;
 
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
 /**
  *
  * @author dimas
@@ -16,6 +19,14 @@ public class LoginView extends javax.swing.JFrame {
      */
     public LoginView() {
         initComponents();
+    }
+
+    public JPasswordField getTxtkata_sandi() {
+        return txtkata_sandi;
+    }
+
+    public JTextField getTxtnama_user() {
+        return txtnama_user;
     }
 
     /**
@@ -33,8 +44,8 @@ public class LoginView extends javax.swing.JFrame {
         UnameLabel2 = new javax.swing.JLabel();
         PassLabel = new javax.swing.JLabel();
         LoginButton = new javax.swing.JButton();
-        UnameTextField = new javax.swing.JTextField();
-        PassPasswordField = new javax.swing.JPasswordField();
+        txtnama_user = new javax.swing.JTextField();
+        txtkata_sandi = new javax.swing.JPasswordField();
         registerLabel = new javax.swing.JLabel();
         registerPanel = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -84,15 +95,25 @@ public class LoginView extends javax.swing.JFrame {
             }
         });
 
-        UnameTextField.setFont(new java.awt.Font("Lato", 0, 12)); // NOI18N
-        UnameTextField.setForeground(new java.awt.Color(38, 50, 56));
-        UnameTextField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(38, 50, 56)));
-        UnameTextField.setPreferredSize(new java.awt.Dimension(2, 24));
+        txtnama_user.setFont(new java.awt.Font("Lato", 0, 12)); // NOI18N
+        txtnama_user.setForeground(new java.awt.Color(38, 50, 56));
+        txtnama_user.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(38, 50, 56)));
+        txtnama_user.setPreferredSize(new java.awt.Dimension(2, 24));
+        txtnama_user.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtnama_userActionPerformed(evt);
+            }
+        });
 
-        PassPasswordField.setFont(new java.awt.Font("Lato", 0, 12)); // NOI18N
-        PassPasswordField.setForeground(new java.awt.Color(38, 50, 56));
-        PassPasswordField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(38, 50, 56)));
-        PassPasswordField.setPreferredSize(new java.awt.Dimension(2, 24));
+        txtkata_sandi.setFont(new java.awt.Font("Lato", 0, 12)); // NOI18N
+        txtkata_sandi.setForeground(new java.awt.Color(38, 50, 56));
+        txtkata_sandi.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(38, 50, 56)));
+        txtkata_sandi.setPreferredSize(new java.awt.Dimension(2, 24));
+        txtkata_sandi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtkata_sandiActionPerformed(evt);
+            }
+        });
 
         registerLabel.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         registerLabel.setForeground(new java.awt.Color(0, 102, 255));
@@ -113,9 +134,9 @@ public class LoginView extends javax.swing.JFrame {
                         .addGap(88, 88, 88)
                         .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(PassLabel)
-                            .addComponent(PassPasswordField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txtkata_sandi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(UnameLabel2)
-                            .addComponent(UnameTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
+                            .addComponent(txtnama_user, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
                             .addComponent(LoginButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(loginPanelLayout.createSequentialGroup()
                         .addGap(142, 142, 142)
@@ -128,11 +149,11 @@ public class LoginView extends javax.swing.JFrame {
                 .addGap(160, 160, 160)
                 .addComponent(UnameLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(UnameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtnama_user, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(PassLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(PassPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtkata_sandi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
                 .addComponent(LoginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -294,7 +315,7 @@ public class LoginView extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(main, javax.swing.GroupLayout.PREFERRED_SIZE, 603, Short.MAX_VALUE)
+            .addComponent(main, javax.swing.GroupLayout.DEFAULT_SIZE, 603, Short.MAX_VALUE)
         );
 
         pack();
@@ -330,6 +351,14 @@ public class LoginView extends javax.swing.JFrame {
         mainPanel.repaint();
         mainPanel.revalidate();
     }//GEN-LAST:event_jLabel8MouseClicked
+
+    private void txtnama_userActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnama_userActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtnama_userActionPerformed
+
+    private void txtkata_sandiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtkata_sandiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtkata_sandiActionPerformed
 
     /**
      * @param args the command line arguments
@@ -372,9 +401,7 @@ public class LoginView extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton LoginButton;
     private javax.swing.JLabel PassLabel;
-    private javax.swing.JPasswordField PassPasswordField;
     private javax.swing.JLabel UnameLabel2;
-    private javax.swing.JTextField UnameTextField;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -393,5 +420,7 @@ public class LoginView extends javax.swing.JFrame {
     private javax.swing.JPanel mainPanel;
     private javax.swing.JLabel registerLabel;
     private javax.swing.JPanel registerPanel;
+    private javax.swing.JPasswordField txtkata_sandi;
+    private javax.swing.JTextField txtnama_user;
     // End of variables declaration//GEN-END:variables
 }

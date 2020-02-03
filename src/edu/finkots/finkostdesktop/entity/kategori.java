@@ -15,6 +15,16 @@ public class kategori {
     
     private Integer id;
     private String nama_kategori ;
+    
+    
+    public kategori(){
+    
+    }
+
+    public kategori(String nama_kategori) {
+        this.nama_kategori = nama_kategori;
+    }
+     
 
     public Integer getId() {
         return id;

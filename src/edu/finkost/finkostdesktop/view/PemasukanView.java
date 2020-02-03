@@ -5,6 +5,10 @@
  */
 package edu.finkost.finkostdesktop.view;
 
+import javax.swing.JComboBox;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
 /**
  *
  * @author dimas
@@ -18,6 +22,19 @@ public class PemasukanView extends javax.swing.JFrame {
         initComponents();
     }
 
+    public JTextArea getCatatanTxt() {
+        return catatanTxt;
+    }
+
+    public JComboBox<String> getKategoriBox() {
+        return kategoriBox;
+    }
+
+    public JTextField getPemasukan_inputTxt() {
+        return pemasukan_inputTxt;
+    }
+    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -28,12 +45,12 @@ public class PemasukanView extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        pemasukanTxt = new javax.swing.JTextField();
+        pemasukan_inputTxt = new javax.swing.JTextField();
         batalBtn = new javax.swing.JButton();
         submitBtn = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        kategoriBox = new javax.swing.JComboBox<>();
+        kategoriBox = new javax.swing.JComboBox<String>();
         jScrollPane1 = new javax.swing.JScrollPane();
         catatanTxt = new javax.swing.JTextArea();
 
@@ -41,10 +58,10 @@ public class PemasukanView extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(38, 50, 56));
 
-        pemasukanTxt.setBackground(new java.awt.Color(38, 50, 56));
-        pemasukanTxt.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        pemasukanTxt.setForeground(new java.awt.Color(255, 255, 255));
-        pemasukanTxt.setText("Rp. ");
+        pemasukan_inputTxt.setBackground(new java.awt.Color(38, 50, 56));
+        pemasukan_inputTxt.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        pemasukan_inputTxt.setForeground(new java.awt.Color(255, 255, 255));
+        pemasukan_inputTxt.setText("Rp. ");
 
         batalBtn.setBackground(new java.awt.Color(235, 87, 87));
         batalBtn.setFont(new java.awt.Font("Lato", 0, 11)); // NOI18N
@@ -79,7 +96,7 @@ public class PemasukanView extends javax.swing.JFrame {
 
         kategoriBox.setBackground(new java.awt.Color(38, 50, 56));
         kategoriBox.setForeground(new java.awt.Color(255, 255, 255));
-        kategoriBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Kategori", "Hiburan", "Makan", "Main" }));
+        kategoriBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Kategori", "Hiburan", "Makan", "Main" }));
 
         catatanTxt.setBackground(new java.awt.Color(38, 50, 56));
         catatanTxt.setColumns(20);
@@ -97,7 +114,7 @@ public class PemasukanView extends javax.swing.JFrame {
                     .addComponent(batalBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 343, Short.MAX_VALUE)
                     .addComponent(submitBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pemasukanTxt, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pemasukan_inputTxt, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(kategoriBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING))
@@ -109,9 +126,9 @@ public class PemasukanView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(pemasukanTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pemasukan_inputTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(kategoriBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(kategoriBox, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -193,7 +210,7 @@ public class PemasukanView extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JComboBox<String> kategoriBox;
-    private javax.swing.JTextField pemasukanTxt;
+    private javax.swing.JTextField pemasukan_inputTxt;
     private javax.swing.JButton submitBtn;
     // End of variables declaration//GEN-END:variables
 }

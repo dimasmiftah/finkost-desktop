@@ -5,6 +5,8 @@
  */
 package edu.finkost.finkostdesktop.view;
 
+import javax.swing.JTextField;
+
 /**
  *
  * @author dimas
@@ -16,6 +18,14 @@ public class ProfilView extends javax.swing.JFrame {
      */
     public ProfilView() {
         initComponents();
+    }
+
+    public JTextField getTxtemail_profile() {
+        return txtemail_profile;
+    }
+
+    public JTextField getTxtprofile_nama() {
+        return txtprofile_nama;
     }
 
     /**
@@ -30,9 +40,9 @@ public class ProfilView extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabelProfile = new javax.swing.JLabel();
         jLabelNama = new javax.swing.JLabel();
-        jTextFieldNama = new javax.swing.JTextField();
+        txtprofile_nama = new javax.swing.JTextField();
         jLabelEmail = new javax.swing.JLabel();
-        jTextFieldEmail = new javax.swing.JTextField();
+        txtemail_profile = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -46,6 +56,8 @@ public class ProfilView extends javax.swing.JFrame {
         jLabelNama.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabelNama.setForeground(new java.awt.Color(255, 255, 255));
         jLabelNama.setText("Nama :");
+
+        txtprofile_nama.setText("cac");
 
         jLabelEmail.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabelEmail.setForeground(new java.awt.Color(255, 255, 255));
@@ -66,8 +78,8 @@ public class ProfilView extends javax.swing.JFrame {
                     .addComponent(jLabelNama))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextFieldNama)
-                    .addComponent(jTextFieldEmail))
+                    .addComponent(txtprofile_nama)
+                    .addComponent(txtemail_profile))
                 .addGap(51, 51, 51))
         );
         jPanel1Layout.setVerticalGroup(
@@ -77,11 +89,11 @@ public class ProfilView extends javax.swing.JFrame {
                 .addComponent(jLabelProfile, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(197, 197, 197)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldNama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtprofile_nama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelNama))
                 .addGap(34, 34, 34)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtemail_profile, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelEmail))
                 .addContainerGap(237, Short.MAX_VALUE))
         );
@@ -140,7 +152,7 @@ public class ProfilView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelNama;
     private javax.swing.JLabel jLabelProfile;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextFieldEmail;
-    private javax.swing.JTextField jTextFieldNama;
+    private javax.swing.JTextField txtemail_profile;
+    private javax.swing.JTextField txtprofile_nama;
     // End of variables declaration//GEN-END:variables
 }

@@ -5,7 +5,9 @@
  */
 package edu.finkots.finkostdesktop.entity;
 
+import java.util.Date;
 import java.util.Objects;
+
 
 /**
  *
@@ -15,8 +17,41 @@ public class transaksi {
     private Integer id_transaksi;
     private Integer uid;
     private Integer id_kategori;
+    private Integer nominal;
+    private java.util.Date tgl_transaksi;
     private Integer uang_sekarang;
+    private String catatan;
     private String jenis_transaksi;
+    
+    public transaksi(){
+    
+    }
+
+    public transaksi(Integer nominal, Date tgl_transaksi, Integer uang_sekarang, String catatan, String jenis_transaksi) {
+        this.nominal = nominal;
+        this.tgl_transaksi = tgl_transaksi;
+        this.uang_sekarang = uang_sekarang;
+        this.catatan = catatan;
+        this.jenis_transaksi = jenis_transaksi;
+    }
+
+
+    public String getJenis_transaksi() {
+        return jenis_transaksi;
+    }
+
+    public void setJenis_transaksi(String jenis_transaksi) {
+        this.jenis_transaksi = jenis_transaksi;
+    }
+    
+    
+    public Date getTgl_transaksi() {
+        return tgl_transaksi;
+    }
+
+    public void setTgl_transaksi(Date tgl_transaksi) {
+        this.tgl_transaksi = tgl_transaksi;
+    }
 
     public Integer getId_transaksi() {
         return id_transaksi;
@@ -42,6 +77,14 @@ public class transaksi {
         this.id_kategori = id_kategori;
     }
 
+    public Integer getNominal() {
+        return nominal;
+    }
+
+    public void setNominal(Integer nominal) {
+        this.nominal = nominal;
+    }
+
     public Integer getUang_sekarang() {
         return uang_sekarang;
     }
@@ -50,22 +93,23 @@ public class transaksi {
         this.uang_sekarang = uang_sekarang;
     }
 
-    public String getJenis_transaksi() {
-        return jenis_transaksi;
+    public String getCatatan() {
+        return catatan;
     }
 
-    public void setJenis_transaksi(String jenis_transaksi) {
-        this.jenis_transaksi = jenis_transaksi;
+    public void setCatatan(String catatan) {
+        this.catatan = catatan;
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 97 * hash + Objects.hashCode(this.id_transaksi);
-        hash = 97 * hash + Objects.hashCode(this.uid);
-        hash = 97 * hash + Objects.hashCode(this.id_kategori);
-        hash = 97 * hash + Objects.hashCode(this.uang_sekarang);
-        hash = 97 * hash + Objects.hashCode(this.jenis_transaksi);
+        hash = 11 * hash + Objects.hashCode(this.id_transaksi);
+        hash = 11 * hash + Objects.hashCode(this.uid);
+        hash = 11 * hash + Objects.hashCode(this.id_kategori);
+        hash = 11 * hash + Objects.hashCode(this.nominal);
+        hash = 11 * hash + Objects.hashCode(this.uang_sekarang);
+        hash = 11 * hash + Objects.hashCode(this.catatan);
         return hash;
     }
 
@@ -87,10 +131,18 @@ public class transaksi {
         if (!Objects.equals(this.id_kategori, other.id_kategori)) {
             return false;
         }
+        if (!Objects.equals(this.nominal, other.nominal)) {
+            return false;
+        }
         if (!Objects.equals(this.uang_sekarang, other.uang_sekarang)) {
+            return false;
+        }
+        if (!Objects.equals(this.catatan, other.catatan)) {
             return false;
         }
         return true;
     }
+
+    
     
 }

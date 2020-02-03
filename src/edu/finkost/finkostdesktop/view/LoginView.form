@@ -133,9 +133,9 @@
                                   <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Component id="PassLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="PassPasswordField" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtkata_sandi" alignment="0" max="32767" attributes="0"/>
                                       <Component id="UnameLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="UnameTextField" alignment="0" pref="218" max="32767" attributes="0"/>
+                                      <Component id="txtnama_user" alignment="0" pref="218" max="32767" attributes="0"/>
                                       <Component id="LoginButton" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
@@ -154,11 +154,11 @@
                           <EmptySpace min="-2" pref="160" max="-2" attributes="0"/>
                           <Component id="UnameLabel2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="UnameTextField" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtnama_user" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="PassLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="PassPasswordField" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtkata_sandi" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                           <Component id="LoginButton" min="-2" pref="30" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -213,7 +213,7 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LoginButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="UnameTextField">
+                <Component class="javax.swing.JTextField" name="txtnama_user">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Lato" size="12" style="0"/>
@@ -232,8 +232,11 @@
                       <Dimension value="[2, 24]"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtnama_userActionPerformed"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JPasswordField" name="PassPasswordField">
+                <Component class="javax.swing.JPasswordField" name="txtkata_sandi">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Lato" size="12" style="0"/>
@@ -252,6 +255,9 @@
                       <Dimension value="[2, 24]"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtkata_sandiActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="registerLabel">
                   <Properties>

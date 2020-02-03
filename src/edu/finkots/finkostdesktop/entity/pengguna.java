@@ -17,6 +17,15 @@ public class pengguna {
     private String username;
     private String password;
 
+    public pengguna(String fullname, String username, String password) {
+        this.fullname = fullname;
+        this.username = username;
+        this.password = password;
+    }
+
+    public pengguna(){
+    
+    }
     public Integer getUid() {
         return uid;
     }

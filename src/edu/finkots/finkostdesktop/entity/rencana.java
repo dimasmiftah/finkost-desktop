@@ -5,6 +5,8 @@
  */
 package edu.finkots.finkostdesktop.entity;
 
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Objects;
 
 /**
@@ -16,9 +18,33 @@ public class rencana {
     private Integer uid;
     private String nama;
     private Integer nominal;
+    private java.util.Date tgl_rencana;
     private String status;
     private String catatan;
     private Integer id_kategori;
+    
+    public rencana(){}
+
+    public Date getTgl_rencana() {
+        return tgl_rencana;
+    }
+
+    public void setTgl_rencana(Date tgl_rencana) {
+        this.tgl_rencana = tgl_rencana;
+    }
+
+    public rencana(Integer id, String nama, Integer nominal, Date tgl_rencana, String status, String catatan) {
+        this.id = id;
+        this.nama = nama;
+        this.nominal = nominal;
+        this.tgl_rencana = tgl_rencana;
+        this.status = status;
+        this.catatan = catatan;
+    }
+
+
+
+
 
     @Override
     public int hashCode() {

@@ -5,6 +5,8 @@
  */
 package edu.finkost.finkostdesktop.view;
 
+import javax.swing.JTextField;
+
 /**
  *
  * @author dimas
@@ -18,6 +20,11 @@ public class KategoriView extends javax.swing.JFrame {
         initComponents();
     }
 
+    public JTextField getTxtkategori() {
+        return txtkategori;
+    }
+    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -30,7 +37,7 @@ public class KategoriView extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txtkategori = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
@@ -46,8 +53,13 @@ public class KategoriView extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Nama kategori");
 
-        jTextField1.setBackground(new java.awt.Color(38, 50, 56));
-        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
+        txtkategori.setBackground(new java.awt.Color(38, 50, 56));
+        txtkategori.setForeground(new java.awt.Color(255, 255, 255));
+        txtkategori.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtkategoriActionPerformed(evt);
+            }
+        });
 
         jButton1.setBackground(new java.awt.Color(251, 181, 168));
         jButton1.setFont(new java.awt.Font("Lato", 0, 11)); // NOI18N
@@ -80,7 +92,7 @@ public class KategoriView extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(101, 101, 101)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtkategori, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2)
                             .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -94,7 +106,7 @@ public class KategoriView extends javax.swing.JFrame {
                 .addGap(52, 52, 52)
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtkategori, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -120,6 +132,10 @@ public class KategoriView extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void txtkategoriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtkategoriActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtkategoriActionPerformed
 
     /**
      * @param args the command line arguments
@@ -162,6 +178,6 @@ public class KategoriView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField txtkategori;
     // End of variables declaration//GEN-END:variables
 }

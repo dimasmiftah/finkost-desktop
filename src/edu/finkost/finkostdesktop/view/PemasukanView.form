@@ -52,7 +52,7 @@
                       <Component id="batalBtn" alignment="1" pref="343" max="32767" attributes="0"/>
                       <Component id="submitBtn" alignment="1" max="32767" attributes="0"/>
                       <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="pemasukanTxt" alignment="0" max="32767" attributes="0"/>
+                      <Component id="pemasukan_inputTxt" alignment="0" max="32767" attributes="0"/>
                       <Component id="kategoriBox" alignment="0" max="32767" attributes="0"/>
                       <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jScrollPane1" alignment="0" max="32767" attributes="0"/>
@@ -67,9 +67,9 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="pemasukanTxt" min="-2" pref="43" max="-2" attributes="0"/>
+                  <Component id="pemasukan_inputTxt" min="-2" pref="43" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="kategoriBox" min="-2" max="-2" attributes="0"/>
+                  <Component id="kategoriBox" min="-2" pref="20" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
@@ -84,7 +84,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JTextField" name="pemasukanTxt">
+        <Component class="javax.swing.JTextField" name="pemasukan_inputTxt">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="38" green="32" red="26" type="rgb"/>

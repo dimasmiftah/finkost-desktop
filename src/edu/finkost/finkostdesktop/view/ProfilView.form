@@ -56,8 +56,8 @@
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jTextFieldNama" max="32767" attributes="0"/>
-                      <Component id="jTextFieldEmail" max="32767" attributes="0"/>
+                      <Component id="txtprofile_nama" max="32767" attributes="0"/>
+                      <Component id="txtemail_profile" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
               </Group>
@@ -70,12 +70,12 @@
                   <Component id="jLabelProfile" min="-2" pref="37" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="197" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jTextFieldNama" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtprofile_nama" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabelNama" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jTextFieldEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtemail_profile" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabelEmail" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="237" max="32767" attributes="0"/>
@@ -107,7 +107,10 @@
             <Property name="text" type="java.lang.String" value="Nama :"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextFieldNama">
+        <Component class="javax.swing.JTextField" name="txtprofile_nama">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="cac"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabelEmail">
           <Properties>
@@ -120,7 +123,7 @@
             <Property name="text" type="java.lang.String" value="Email : "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextFieldEmail">
+        <Component class="javax.swing.JTextField" name="txtemail_profile">
         </Component>
       </SubComponents>
     </Container>

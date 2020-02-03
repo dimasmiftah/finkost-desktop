@@ -6,6 +6,8 @@
 
 package edu.finkost.finkostdesktop.view;
 
+import javax.swing.JLabel;
+
 /**
  *
  * @author dimas
@@ -15,6 +17,14 @@ public class MainView extends javax.swing.JFrame {
     /** Creates new form MainView */
     public MainView() {
         initComponents();
+    }
+
+    public JLabel getTxtpemasukan() {
+        return txtpemasukan;
+    }
+
+    public JLabel getTxtpengeluaran() {
+        return txtpengeluaran;
     }
 
     /** This method is called from within the constructor to
@@ -37,8 +47,8 @@ public class MainView extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
+        txtpemasukan = new javax.swing.JLabel();
+        txtpengeluaran = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
@@ -132,13 +142,13 @@ public class MainView extends javax.swing.JFrame {
 
         jSeparator1.setBackground(new java.awt.Color(38, 50, 56));
 
-        jLabel13.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(47, 128, 237));
-        jLabel13.setText("600000");
+        txtpemasukan.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
+        txtpemasukan.setForeground(new java.awt.Color(47, 128, 237));
+        txtpemasukan.setText("600000");
 
-        jLabel15.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(246, 61, 94));
-        jLabel15.setText("26000");
+        txtpengeluaran.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
+        txtpengeluaran.setForeground(new java.awt.Color(246, 61, 94));
+        txtpengeluaran.setText("26000");
 
         jLabel14.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(38, 50, 56));
@@ -162,14 +172,14 @@ public class MainView extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                         .addComponent(jLabel14)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel15))
+                        .addComponent(txtpengeluaran))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                         .addGap(0, 74, Short.MAX_VALUE)
                         .addComponent(jLabel11))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                         .addComponent(jLabel12)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel13)))
+                        .addComponent(txtpemasukan)))
                 .addContainerGap())
         );
         jPanel5Layout.setVerticalGroup(
@@ -179,11 +189,11 @@ public class MainView extends javax.swing.JFrame {
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel13)
+                    .addComponent(txtpemasukan)
                     .addComponent(jLabel12))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel15)
+                    .addComponent(txtpengeluaran)
                     .addComponent(jLabel14))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -686,7 +696,7 @@ public class MainView extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 555, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 555, Short.MAX_VALUE)
         );
 
         pack();
@@ -810,9 +820,7 @@ public class MainView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
@@ -850,6 +858,8 @@ public class MainView extends javax.swing.JFrame {
     private javax.swing.JButton profileBtn;
     private javax.swing.JButton reportBtn;
     private javax.swing.JPanel reportPanel;
+    private javax.swing.JLabel txtpemasukan;
+    private javax.swing.JLabel txtpengeluaran;
     // End of variables declaration//GEN-END:variables
 
 }
