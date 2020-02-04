@@ -22,7 +22,7 @@ import java.util.List;
  */
 public class transaksiDaoImpl implements transaksiDao {
     
-     private Connection connection;
+    private Connection connection;
          
     private final String inserttransaksi = "INSERT INTO transaksi (nominal,tgl_transaksi,uang_sekarang,catatan,jenis_transaksi) VALUES(?,?,?,?,?) ";
     

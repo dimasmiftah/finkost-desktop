@@ -324,10 +324,10 @@ public class LoginView extends javax.swing.JFrame {
 
     private void LoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginButtonActionPerformed
         // TODO add your handling code here:
-//        MainFrame main = new MainFrame();
+        MainView main = new MainView();
 
-//        main.setVisible(true);
-//        this.setVisible(false);
+        main.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_LoginButtonActionPerformed
 
     private void registerLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registerLabelMouseClicked

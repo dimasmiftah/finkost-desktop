@@ -705,21 +705,21 @@ public class MainView extends javax.swing.JFrame {
 
     private void pengeluaranBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pengeluaranBtnActionPerformed
         // TODO add your handling code here:
-//        PengeluaranFrame pengeluaran = new PengeluaranFrame();
-//        pengeluaran.setVisible(true);
+        PengeluaranView pengeluaran = new PengeluaranView();
+        pengeluaran.setVisible(true);
     }//GEN-LAST:event_pengeluaranBtnActionPerformed
 
     private void pemasukanBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pemasukanBtnActionPerformed
         // TODO add your handling code here:
-//        PemasukanFrame pemasukan = new PemasukanFrame();
-//        pemasukan.setVisible(true);
+        PemasukanView pemasukan = new PemasukanView();
+        pemasukan.setVisible(true);
     }//GEN-LAST:event_pemasukanBtnActionPerformed
 
     private void btnTambahReActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambahReActionPerformed
         // TODO add your handling code here:
-//        AnggaranFrame a = new AnggaranFrame();
+        TagihanView a = new TagihanView();
 
-//        a.setVisible(true);
+        a.setVisible(true);
     }//GEN-LAST:event_btnTambahReActionPerformed
 
     private void homeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeBtnActionPerformed
@@ -757,22 +757,22 @@ public class MainView extends javax.swing.JFrame {
 
     private void addCategoryBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addCategoryBtnActionPerformed
         // TODO add your handling code here:
-//        KategoriFrame kategori = new KategoriFrame();
-//        kategori.setVisible(true);
+        KategoriView kategori = new KategoriView();
+        kategori.setVisible(true);
     }//GEN-LAST:event_addCategoryBtnActionPerformed
 
     private void profileBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_profileBtnActionPerformed
         // TODO add your handling code here:
-//        ProfilFrame profil = new ProfilFrame();
-//        profil.setVisible(true);
+        ProfilView profil = new ProfilView();
+        profil.setVisible(true);
     }//GEN-LAST:event_profileBtnActionPerformed
 
     private void logoutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutBtnActionPerformed
         // TODO add your handling code here:
-//        LoginFrame login = new LoginFrame();
-//        this.setVisible(false);
-//
-//        login.setVisible(true);
+        LoginView login = new LoginView();
+        this.setVisible(false);
+
+        login.setVisible(true);
 
     }//GEN-LAST:event_logoutBtnActionPerformed
 

@@ -52,7 +52,7 @@ public class TagihanView extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         txttagihan_input = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
-        categoriBox = new javax.swing.JComboBox<String>();
+        categoriBox = new javax.swing.JComboBox<>();
         jSeparator2 = new javax.swing.JSeparator();
         jLabel3 = new javax.swing.JLabel();
         txtcatatan_tagihan = new javax.swing.JTextField();
@@ -62,7 +62,8 @@ public class TagihanView extends javax.swing.JFrame {
         date_tagihan = new com.toedter.calendar.JDateChooser();
         jLabel4 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(38, 50, 56));
 
@@ -85,7 +86,7 @@ public class TagihanView extends javax.swing.JFrame {
         categoriBox.setBackground(new java.awt.Color(38, 50, 56));
         categoriBox.setFont(new java.awt.Font("Lato", 0, 14)); // NOI18N
         categoriBox.setForeground(new java.awt.Color(255, 255, 255));
-        categoriBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Pilih Kategori", "Item 2", "Item 3", "Item 4" }));
+        categoriBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Kategori", "Item 2", "Item 3", "Item 4" }));
 
         jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
 

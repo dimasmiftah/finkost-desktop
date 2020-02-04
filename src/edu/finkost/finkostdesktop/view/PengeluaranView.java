@@ -49,11 +49,12 @@ public class PengeluaranView extends javax.swing.JFrame {
         submitBtn = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        kategoriBox = new javax.swing.JComboBox<String>();
+        kategoriBox = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         catatanTxt = new javax.swing.JTextArea();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(38, 50, 56));
 
@@ -95,7 +96,7 @@ public class PengeluaranView extends javax.swing.JFrame {
 
         kategoriBox.setBackground(new java.awt.Color(38, 50, 56));
         kategoriBox.setForeground(new java.awt.Color(255, 255, 255));
-        kategoriBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Kategori", "Hiburan", "Makan", "Main" }));
+        kategoriBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Kategori", "Hiburan", "Makan", "Main" }));
 
         catatanTxt.setBackground(new java.awt.Color(38, 50, 56));
         catatanTxt.setColumns(20);
@@ -153,6 +154,7 @@ public class PengeluaranView extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void batalBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_batalBtnActionPerformed
