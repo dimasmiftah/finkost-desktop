@@ -5,19 +5,34 @@
  */
 package edu.finkost.finkostdesktop.view;
 
+import edu.finkost.finkostdesktop.controller.KategoriController;
+import edu.finkost.finkostdesktop.event.kategoriListener;
+import edu.finkost.finkostdesktop.model.kategorimodel;
+import edu.finkots.finkostdesktop.entity.kategori;
 import javax.swing.JTextField;
 
 /**
  *
  * @author dimas
  */
-public class KategoriView extends javax.swing.JFrame {
+public class KategoriView extends javax.swing.JFrame implements kategoriListener{
 
     /**
      * Creates new form KategoriView
      */
+    private kategorimodel model;
+    private KategoriController controller;
+    
     public KategoriView() {
+        
+        model = new kategorimodel();
+        model.setListener(this);
+        
+        controller = new KategoriController();
+        controller.setModel(model);
+        
         initComponents();
+        
     }
 
     public JTextField getTxtkategori() {
@@ -68,6 +83,11 @@ public class KategoriView extends javax.swing.JFrame {
         jButton1.setText("Simpan");
         jButton1.setBorder(null);
         jButton1.setBorderPainted(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setBackground(new java.awt.Color(235, 87, 87));
         jButton2.setFont(new java.awt.Font("Lato", 0, 11)); // NOI18N
@@ -139,6 +159,11 @@ public class KategoriView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtkategoriActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        controller.insertKategori(this);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -182,4 +207,24 @@ public class KategoriView extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField txtkategori;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void onChange(kategorimodel model) {
+        txtkategori.setText(model.getNama_kategori());
+    }
+
+    @Override
+    public void onInsert(kategori kategori) {
+        
+    }
+
+    @Override
+    public void onDelete() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void onUpdate(kategori kategori) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
