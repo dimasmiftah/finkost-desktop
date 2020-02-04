@@ -26,7 +26,7 @@ public class PengeluaranController {
     
     public void insertPengeluaran(PengeluaranView view){
         Integer pengeluaran = Integer.parseInt(view.getPengeluaran_inputTxt().getText());
-        Integer kategori = Integer.parseInt(view.getKategoriBox().getItemAt(0));
+        Integer kategori = view.getKategoriBox().getSelectedIndex();
         String catatan = view.getCatatanTxt().getText();
         
         

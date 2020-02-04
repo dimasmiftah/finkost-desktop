@@ -27,7 +27,7 @@ public class RencanaController {
     
     public void insertRencana(TagihanView view){
         Integer tagihan = Integer.parseInt(view.getTxttagihan_input().getText());
-        Integer kategori = Integer.parseInt(view.getCategoriBox().getItemAt(0));
+        Integer kategori = view.getCategoriBox().getSelectedIndex();
         String catatan = view.getTxtcatatan_tagihan().getText();
         Date tanggal = view.getDate_tagihan().getDate();
         

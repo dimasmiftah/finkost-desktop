@@ -26,7 +26,7 @@ public class PemasukanController {
     
     public void insertPemasukan(PemasukanView view){
         Integer pemasukan = Integer.parseInt(view.getPemasukan_inputTxt().getText());
-        Integer kategori = Integer.parseInt(view.getKategoriBox().getItemAt(0));
+        Integer kategori = view.getKategoriBox().getSelectedIndex();
         String catatan = view.getCatatanTxt().getText();
         
         
