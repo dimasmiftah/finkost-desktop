@@ -21,11 +21,11 @@ public class RencanaController {
         this.model = model;
     }
     
-    public void resetPengeluaran(TagihanView view){
+    public void resetRencana(TagihanView view){
         model.resetTagihan();
     }
     
-    public void insertPengeluaran(TagihanView view){
+    public void insertRencana(TagihanView view){
         Integer tagihan = Integer.parseInt(view.getTxttagihan_input().getText());
         Integer kategori = Integer.parseInt(view.getCategoriBox().getItemAt(0));
         String catatan = view.getTxtcatatan_tagihan().getText();

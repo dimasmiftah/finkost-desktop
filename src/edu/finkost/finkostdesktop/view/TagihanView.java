@@ -6,6 +6,10 @@
 package edu.finkost.finkostdesktop.view;
 
 import com.toedter.calendar.JDateChooser;
+import edu.finkost.finkostdesktop.controller.RencanaController;
+import edu.finkost.finkostdesktop.event.tagihanListener;
+import edu.finkost.finkostdesktop.model.tagihanmodel;
+import edu.finkots.finkostdesktop.entity.rencana;
 import javax.swing.JComboBox;
 import javax.swing.JTextField;
 
@@ -13,12 +17,22 @@ import javax.swing.JTextField;
  *
  * @author dimas
  */
-public class TagihanView extends javax.swing.JFrame {
+public class TagihanView extends javax.swing.JFrame implements tagihanListener{
 
     /**
      * Creates new form AnggaranView
      */
+    private tagihanmodel model;
+    private RencanaController controller;
+    
     public TagihanView() {
+        
+        model = new tagihanmodel();
+        model.setListener(this);
+        
+        controller = new RencanaController();
+        controller.setModel(model);
+        
         initComponents();
     }
 
@@ -206,7 +220,7 @@ public class TagihanView extends javax.swing.JFrame {
 
     private void btnSimpanAnggaranActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanAnggaranActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
+        controller.insertRencana(this);
     }//GEN-LAST:event_btnSimpanAnggaranActionPerformed
 
     private void btnBatalAnggaranActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBatalAnggaranActionPerformed
@@ -266,4 +280,24 @@ public class TagihanView extends javax.swing.JFrame {
     private javax.swing.JTextField txtcatatan_tagihan;
     private javax.swing.JTextField txttagihan_input;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void onChange(tagihanmodel model) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void onInsert(rencana rencana) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void onDelete() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void onUpdate(rencana rencana) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
