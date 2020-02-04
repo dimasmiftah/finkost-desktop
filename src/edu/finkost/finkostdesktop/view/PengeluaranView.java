@@ -5,6 +5,10 @@
  */
 package edu.finkost.finkostdesktop.view;
 
+import edu.finkost.finkostdesktop.controller.PengeluaranController;
+import edu.finkost.finkostdesktop.event.pengeluaranListener;
+import edu.finkost.finkostdesktop.model.pengeluaranmodel;
+import edu.finkots.finkostdesktop.entity.transaksi;
 import javax.swing.JComboBox;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
@@ -13,13 +17,25 @@ import javax.swing.JTextField;
  *
  * @author dimas
  */
-public class PengeluaranView extends javax.swing.JFrame {
+public class PengeluaranView extends javax.swing.JFrame implements pengeluaranListener{
 
     /**
      * Creates new form PengeluaranView
      */
+    private pengeluaranmodel model;
+    private PengeluaranController controller;
+    
     public PengeluaranView() {
+        
+        model = new pengeluaranmodel();
+        model.setListener(this);
+        
+        controller = new PengeluaranController();
+        controller.setModel(model);
+        
+        
         initComponents();
+        
     }
 
     public JTextArea getCatatanTxt() {
@@ -52,6 +68,7 @@ public class PengeluaranView extends javax.swing.JFrame {
         kategoriBox = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         catatanTxt = new javax.swing.JTextArea();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
@@ -61,7 +78,7 @@ public class PengeluaranView extends javax.swing.JFrame {
         pengeluaran_inputTxt.setBackground(new java.awt.Color(38, 50, 56));
         pengeluaran_inputTxt.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         pengeluaran_inputTxt.setForeground(new java.awt.Color(255, 255, 255));
-        pengeluaran_inputTxt.setText("Rp. ");
+        pengeluaran_inputTxt.setBorder(null);
 
         batalBtn.setBackground(new java.awt.Color(235, 87, 87));
         batalBtn.setFont(new java.awt.Font("Lato", 0, 11)); // NOI18N
@@ -104,6 +121,10 @@ public class PengeluaranView extends javax.swing.JFrame {
         catatanTxt.setRows(5);
         jScrollPane1.setViewportView(catatanTxt);
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Rp");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -114,10 +135,13 @@ public class PengeluaranView extends javax.swing.JFrame {
                     .addComponent(batalBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 343, Short.MAX_VALUE)
                     .addComponent(submitBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pengeluaran_inputTxt, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(kategoriBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(pengeluaran_inputTxt)))
                 .addGap(27, 27, 27))
         );
         jPanel1Layout.setVerticalGroup(
@@ -126,7 +150,9 @@ public class PengeluaranView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(pengeluaran_inputTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(pengeluaran_inputTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(kategoriBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -164,7 +190,7 @@ public class PengeluaranView extends javax.swing.JFrame {
 
     private void submitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtnActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
+        controller.insertPengeluaran(this);
     }//GEN-LAST:event_submitBtnActionPerformed
 
     /**
@@ -205,6 +231,7 @@ public class PengeluaranView extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton batalBtn;
     private javax.swing.JTextArea catatanTxt;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
@@ -213,4 +240,24 @@ public class PengeluaranView extends javax.swing.JFrame {
     private javax.swing.JTextField pengeluaran_inputTxt;
     private javax.swing.JButton submitBtn;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void onChange(pengeluaranmodel model) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void onInsert(transaksi pengeluaran) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void onDelete() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void onUpdate(transaksi pengeluaran) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
