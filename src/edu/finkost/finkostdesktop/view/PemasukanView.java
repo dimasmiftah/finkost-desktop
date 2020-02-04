@@ -5,6 +5,10 @@
  */
 package edu.finkost.finkostdesktop.view;
 
+import edu.finkost.finkostdesktop.controller.PemasukanController;
+import edu.finkost.finkostdesktop.event.pemasukanListener;
+import edu.finkost.finkostdesktop.model.pemasukanmodel;
+import edu.finkots.finkostdesktop.entity.transaksi;
 import javax.swing.JComboBox;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
@@ -13,12 +17,22 @@ import javax.swing.JTextField;
  *
  * @author dimas
  */
-public class PemasukanView extends javax.swing.JFrame {
+public class PemasukanView extends javax.swing.JFrame implements pemasukanListener{
 
     /**
      * Creates new form PemasukanView
      */
+    private pemasukanmodel model;
+    private PemasukanController controller;
+    
     public PemasukanView() {
+        
+        model = new pemasukanmodel();
+        model.setListener(this);
+        
+        controller = new PemasukanController();
+        controller.setModel(model);
+        
         initComponents();
     }
 
@@ -176,7 +190,7 @@ public class PemasukanView extends javax.swing.JFrame {
 
     private void submitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtnActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
+        controller.insertPemasukan(this);
     }//GEN-LAST:event_submitBtnActionPerformed
 
     /**
@@ -226,4 +240,24 @@ public class PemasukanView extends javax.swing.JFrame {
     private javax.swing.JTextField pemasukan_inputTxt;
     private javax.swing.JButton submitBtn;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void onChange(pemasukanmodel model) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void onInsert(transaksi pemasukan) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void onDelete() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void onUpdate(transaksi pemasukan) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
